@@ -1,0 +1,18 @@
+(function(){
+  "use strict";
+
+  var base = require("./base.js"),
+      ViewClass = require("../views/<%=: name | capitalize %>.js");
+
+  var <%=: name | capitalize %>Ctrl, _ptype;
+
+  <%=: name | capitalize %>Ctrl = function(){
+    this.payload = {title: ""};
+    this._view   = new ViewClass();
+  };
+
+  _ptype = <%=: name | capitalize %>Ctrl.prototype = base.getProto("std");
+  _ptype._name = "<%=: name | capitalize %>";
+
+  module.exports = <%=: name | capitalize %>Ctrl;
+}());

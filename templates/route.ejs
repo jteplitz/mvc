@@ -1,0 +1,38 @@
+(function(){
+  "use strict";
+
+  var _ = require("underscore"),
+          <% methods.forEach(function(method){ %>
+          handle<%=: method | capitalize %>,
+          <% }) %>
+          handler, dispatch,
+
+          ControllerClass = require("../controllers/<%=: name | capitalize %>.js");
+
+  <% methods.forEach(function(method){ %>
+  handle<%=: method | capitalize %> = function(req, res, next){
+    <% if (method === "get"){ %>
+    var control = new ControllerClass();
+
+    var params = {};
+
+    control.renderView(res, params);
+    <% } %>
+  };    
+  <% }) %>
+
+  dispatch = {
+    <% methods.forEach(function(method){ %>
+    <%=: method | upcase %>: handle<%=: method | capitalize %>,
+    <% }) %>
+  };
+  handler = function(req, res, next){
+    if (_.has(dispatch, req.method)){
+      return dispatch[req.method](req, res, next);
+    }
+
+    return next(405);
+  };
+  
+  module.exports = handler;
+}());

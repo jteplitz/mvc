@@ -1,0 +1,16 @@
+(function(){
+  "use strict";
+  
+  var base = require("./base.js");
+
+
+  var <%=: name | capitalize %>View, _ptype;
+
+  <%=: name | capitalize %>View = function(){};
+
+  _ptype = <%=: name | capitalize %>View.prototype = base.getProto("std");
+  _ptype._view_name = "<%=: name | capitalize %>View";
+  _ptype._template  = "<%= name %>.jade";
+
+  module.exports = <%=: name | capitalize %>View;
+}());

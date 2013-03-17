@@ -1,0 +1,16 @@
+{
+  "name": "mvc",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Command line scripts for an mvc framework",
+  "dependencies": {
+    "prompt": "0.2.x",
+    "underscore": "1.4.x",
+    "async": "0.2.x",
+    "ejs": "0.4.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jteplitz/mvc"
+  }
+}
