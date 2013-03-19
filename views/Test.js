@@ -10,7 +10,7 @@
 
   _ptype = TestView.prototype = base.getProto("std");
   _ptype._view_name = "TestView";
-  _ptype._template  = "test.jade";
+  _ptype._template  = "Test.jade";
 
   module.exports = TestView;
 }());

@@ -2,9 +2,9 @@
   "use strict";
 
   var base = require("./base.js"),
-      ViewClass = require("../views/Test.js");
+      ViewClass = require("../views/Test.js"),
 
-  var TestCtrl, _ptype;
+      TestCtrl, _ptype;
 
   TestCtrl = function(){
     this.payload = {title: ""};

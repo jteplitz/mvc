@@ -2,9 +2,9 @@
   "use strict";
 
   var base = require("./base.js"),
-      ViewClass = require("../views/<%=: name | capitalize %>.js");
+      ViewClass = require("../views/<%=: name | capitalize %>.js"),
 
-  var <%=: name | capitalize %>Ctrl, _ptype;
+      <%=: name | capitalize %>Ctrl, _ptype;
 
   <%=: name | capitalize %>Ctrl = function(){
     this.payload = {title: ""};

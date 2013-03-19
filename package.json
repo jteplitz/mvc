@@ -4,10 +4,10 @@
   "private": true,
   "description": "Command line scripts for an mvc framework",
   "dependencies": {
-    "prompt": "0.2.x",
     "underscore": "1.4.x",
     "async": "0.2.x",
-    "ejs": "0.4.x"
+    "ejs": "0.8.x",
+    "nconf": "0.6.x"
   },
   "repository": {
     "type": "git",
