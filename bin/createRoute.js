@@ -75,6 +75,5 @@
     return string;
   };
 
-  prompt.start();
   getData();
 }());
